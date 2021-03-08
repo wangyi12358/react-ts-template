@@ -1,0 +1,59 @@
+@import '~common/less/index.less';
+
+.search {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  height: 32px;
+
+  :global {
+    .ant-input-affix-wrapper  {
+      box-shadow: none;
+      border: none;
+      background-color: @list-bg-color;
+      z-index: 0;
+    }
+    .ant-input-search {
+      width: 180px;
+      flex: auto;
+
+      .ant-input-suffix {
+        .font(16px);
+        right: @spacer;
+        cursor: pointer;
+        color: #ABAFBF;
+      }
+
+      .ant-input-search-icon {
+        display: none;
+      }
+    }
+    .ant-input {
+      background-color: @list-bg-color;
+      border: none;
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(40, 106, 180, 0.2);
+      }
+    }
+  }
+
+  .reset {
+    margin-left: @spacer;
+    .font(12px, 18px);
+
+    &.resetDisabled {
+      color: @font-disabled-color;
+      cursor: not-allowed;
+    }
+  }
+
+
+  .icon {
+    cursor:pointer
+  }
+
+  .disableIcon {
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,28 @@
+@import '~common/less/index.less';
+
+.btn {
+  min-width: 90px;
+  height: 32px;
+  text-align: center;
+  padding: 0 @spacer * 2;
+  .font(14px);
+  color: @font-title-color;
+  background-color: transparent;
+
+  &.btn[disabled] {
+    background-color: transparent;
+  }
+
+  &.primary {
+    color: white;
+    background-color: @primary-color;
+    &:hover {
+      background-color: @primary-hover-color;
+    }
+  }
+  
+  &.primary[disabled] {
+    background: @disabled-bg-color;
+    color: @font-disabled-color;
+  }
+}

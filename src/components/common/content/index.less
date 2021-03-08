@@ -1,0 +1,36 @@
+@import '~common/less/index.less';
+
+.content {
+  background: @list-bg-color ;
+  min-height: 100%;
+  padding: @spacer * 2;
+
+  >h6 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before {
+      content: '';
+      width: 4px;
+      height: 12px;
+      position: absolute;
+      top: 50%;
+      left: -20px;
+      margin-top: -6px;
+      background: @primary-color;
+    }
+  }
+
+  .body {
+    padding: @spacer * 2 0;
+
+    &.normal {
+      padding: @spacer * 2;
+    }
+    &.large {
+      padding: @spacer * 4;
+    }
+  }
+}

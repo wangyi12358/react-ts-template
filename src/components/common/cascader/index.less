@@ -1,0 +1,55 @@
+@import '~common/less/index.less';
+
+.cascader{
+  height: 40px;
+  .font(12px, 40px);
+  
+  :global {
+    .ant-cascader-picker-label {
+      .font(12px, 20px);
+      color: @font-title-color;
+      padding: 0 @spacer * 2;
+    }
+    .ant-cascader-input {
+      height: 40px;
+      padding: 0 @spacer * 2;
+    }
+  }
+} 
+
+:global {
+  .ant-cascader-menus {
+    background-color: white;
+    border: 1px solid @border-color;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.08);
+
+    .ant-cascader-menu {
+      padding: @spacer * .5 0;
+      border-right-color: @border-color;
+    }
+    .ant-cascader-menu-item {
+      height: 48px;
+      padding: 0 @spacer * 2.5 0 @spacer * 2;
+      .font(12px, 48px);
+      transition: all .25s;
+      background-color: transparent;
+      color: @font-title-color;
+
+      .ant-cascader-menu-item-expand-icon {
+        color: @font-title-color;
+      }
+
+      &:hover {
+        background-color: @list-bg-color ;
+      }
+    }
+    .ant-cascader-menu-item-active {
+      background-color: @primary-color!important;
+      color: white;
+
+      .ant-cascader-menu-item-expand-icon {
+        color: white;
+      }
+    }
+  }
+}

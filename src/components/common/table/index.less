@@ -1,0 +1,77 @@
+@import '~common/less/index.less';
+
+.table {
+  color: red;
+  flex: auto;
+  position: relative;
+  width: 100%;
+
+  .searchBar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: @spacer;
+
+    .searchBtns {
+    
+      button {
+        margin-right: @spacer;
+      }
+
+    }
+  }
+
+  .tableBody {
+    margin-top: @spacer * .5;
+    padding-bottom: 34px;
+
+    :global {
+      .ant-table-thead {
+        .font(12px);
+        padding: 0 @spacer;
+  
+        th {
+          height: 30px;
+          background-color: @list-bg-color ;
+          color: @font-title-color;
+          padding: 0 @spacer;
+          border-bottom: none;
+        }
+      }
+      .ant-table {
+        .font(12px);
+      }
+      .ant-table-tbody {
+
+        >tr:first-child {
+          margin-top: @spacer * .5;
+          >td {
+            border-top: 1px solid @line-color;
+          }
+        }
+        >tr {
+          height: 70px;
+          &:hover {
+            >td {
+              background-color: @list-hover-color !important;
+            }
+          }
+
+          >td {
+            min-height: 70px;
+            border-color: @line-color;
+            padding: @spacer;
+          }
+        }
+
+      }
+    }
+  }
+
+  .pag {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

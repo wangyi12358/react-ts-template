@@ -1,0 +1,25 @@
+@import '~common/less/index.less';
+
+.tag {
+  min-width: 58px;
+  height: 24px;
+  .font(12px, 24px);
+  padding: 0 @spacer;
+  color: white;
+  transition: all .25s;
+  display: inline-block;
+  text-align: center;
+
+  &.primary {
+    background-color: @primary-color;
+  }
+  &.warn {
+    background-color: @warn-color;
+  }
+  &.success {
+    background-color: @success-color;
+  }
+  &.error {
+    background-color: @error-color;
+  }
+}

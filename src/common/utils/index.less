@@ -1,0 +1,55 @@
+@import '~common/less/index.less';
+
+:global {
+  .ant-message {
+    top: 70px;
+    .ant-message-notice-content {
+      padding: 0;
+    }
+    .ant-message-custom-content {
+      min-width: 230px;
+      height: 32px;
+      padding: 0 @spacer * 2;
+      color: white;
+      display: flex;
+      border-radius: 2px;
+      border-width: 1px;
+      border-style: solid;
+      align-items: center;
+
+      span {
+        .font(12px);
+      }
+    }
+    .ant-message-success {
+      color: @success-color;
+      border-color: @success-color;
+      background: rgba(110,162,4,0.1);
+    }
+    .ant-message-error {
+      color: @error-color;
+      border-color: @error-color;
+      background: rgba(206,17,38,0.1);
+    }
+    .ant-message-warning {
+      color: @warn-color;
+      border-color: @warn-color;
+      background: rgba(242,175,0,0.1);
+    }
+    .ant-message-success .anticon,
+    .ant-message-error .anticon,
+    .ant-message-warning .anticon {
+      // color: white!important;
+      top: 0;
+      .font(20px);
+      margin-right: @spacer;
+    }
+  }
+}
+
+.messageIcon {
+  // color: white;
+  // top: 0;
+  // .font(20px);
+  // margin-right: @spacer;
+}

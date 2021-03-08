@@ -1,0 +1,35 @@
+@import '~common/less/index.less';
+
+.switch {
+  width: 50px;
+  height: 24px;
+}
+
+:global {
+  .ant-switch {
+    background-color: @font-text-color;
+  }
+  .ant-switch::after {
+    top: 2px;
+    left: 2px;
+    box-shadow:0px 2px 4px 0px rgba(82,82,86,1);
+  }
+  .ant-switch-checked {
+    background-color: @primary-color;
+    &::after {
+      top: 2px;
+      left: 100%;
+      margin-left: -2px;
+      box-shadow: 0px 2px 4px 0px rgba(82,82,86,1);
+    }
+  }
+  .ant-switch-disabled {
+    background-color: @list-bg-color ;
+    opacity: 1;
+    &::after {
+      box-shadow: 0px 2px 4px 0px rgba(228,228,228,1);
+      // top: 1px;
+      background-color: @disabled-bg-color;
+    }
+  }
+}

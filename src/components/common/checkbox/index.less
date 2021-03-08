@@ -1,0 +1,29 @@
+@import '~common/less/index.less';
+
+.checkbox {
+  color: @font-title-color;
+
+  :global {
+    .ant-checkbox-group-item {
+      color: @font-title-color;
+    }
+    .ant-checkbox-inner {
+      transition: all .25s;
+    }
+    .ant-checkbox-checked:hover .ant-checkbox-inner {
+      background-color: @primary-hover-color;
+      border-color: @primary-hover-color;
+    }
+    .ant-checkbox + span {
+      padding: 0 @spacer * .5;
+      .font(12px, 16px);
+    }
+    .ant-checkbox-group-item {
+      margin-right: @spacer * 4;
+    }
+    .ant-checkbox-disabled .ant-checkbox-inner {
+      background-color: @font-disabled-color !important;
+      border-color: @line-color !important;
+    }
+  }
+}

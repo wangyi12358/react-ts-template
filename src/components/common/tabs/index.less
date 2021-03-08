@@ -1,0 +1,34 @@
+@import '~common/less/index.less';
+
+.box{
+  display: flex;
+  list-style: none;
+  border-bottom: 1px solid @line-color;
+  position: relative;
+
+  li {
+    padding: 0 12px;
+    .font(14px, 34px);
+    color: @font-title-color;
+    transition: all .25s;
+    cursor: pointer;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .selected {
+    color: @primary-color;
+  }
+
+  .line {
+    display: inline-block;
+    position: absolute;
+    height: 2px;
+    bottom: -1px;
+    transition: all .25s;
+    background-color: @primary-color;
+  }
+
+}

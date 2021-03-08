@@ -1,0 +1,272 @@
+@import '~common/less/index.less';
+
+
+.layout {
+  height: 100vh;
+// display: flex;
+
+  .sider {
+    background: @list-bg-color ;
+
+    .trigger {
+      color: @font-weak-color;
+      .font(16px, 16px);
+      
+    }
+
+    :global {
+      .ant-layout-sider-trigger {
+        background: @list-bg-color ;
+        height: 52px;
+        border-top: 1px solid @border-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 0;
+        .anticon {
+          color: @font-weak-color;
+        }
+      }
+
+      // 路由
+      .ant-menu {
+        background: transparent;
+        color: @font-weak-color;
+      }
+
+      .ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left {
+        border-right: none;
+      }
+      // .ant-menu-sub {
+      //   // background: #E9E9E9;
+      // }
+      .ant-menu-item {
+        color: @font-weak-color;
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 48px;
+        .font(12px, 48px);
+      }
+
+      .ant-menu-submenu-title {
+        // color: @font-title-color;
+        height: 48px;
+        .font(12px, 48px);
+      }
+
+      .ant-menu-item-selected {
+        background: white;
+        color: @primary-color;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .ant-menu-inline .ant-menu-item:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      .ant-menu-inline-collapsed > .ant-menu-item,
+      .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
+        padding: 0 12px !important;
+        width: 40px;
+      }
+      .ant-menu-vertical .ant-menu-item,
+      .ant-menu-vertical-left .ant-menu-item,
+      .ant-menu-vertical-right .ant-menu-item,
+      .ant-menu-inline .ant-menu-item,
+      .ant-menu-vertical .ant-menu-submenu-title,
+      .ant-menu-vertical-left .ant-menu-submenu-title,
+      .ant-menu-vertical-right .ant-menu-submenu-title,
+      .ant-menu-inline .ant-menu-submenu-title {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .ant-menu-sub > .ant-menu-item {
+        padding-left: 48px !important;
+      }
+
+      .ant-menu-submenu-arrow {
+        &::before {
+          background-image: linear-gradient(to right, @font-weak-color, @font-weak-color);
+        }
+        &::after {
+          background-image: linear-gradient(to right, @font-weak-color, @font-weak-color)
+        }
+      }
+
+      .ant-menu-submenu-selected {
+        background-color: @list-dark-color;
+        color: @font-title-color;
+
+        .ant-menu-submenu-arrow {
+          &::before {
+            background-image: linear-gradient(to right, @font-title-color, @font-title-color);
+          }
+          &::after {
+            background-image: linear-gradient(to right, @font-title-color, @font-title-color)
+          }
+        }
+
+        .ant-menu-item {
+          position: relative;
+          &::before {
+            content: '';
+            width: 4px;
+            height: 0;
+            position: absolute;
+            top: 24px;
+            left: 0;
+            background-color: @primary-color;
+          }
+        }
+
+        .ant-menu-item-selected {
+          &::before {
+            height: 48px;
+            top: 0;
+            .transition();
+          }
+          a {
+            font-family: 'PingFangSC-Regular,PingFang SC';
+            font-weight: bold;
+          }
+        }
+      }
+
+      .ant-menu-inline-collapsed .ant-menu-submenu-selected .ant-menu-submenu-title {
+        background: white;
+      }
+    }
+
+    .title {
+      margin-left: @spacer;
+      .font(14px, 48px);
+      font-family:'PingFangSC-Regular,PingFang SC';
+      font-weight:400;
+    }
+
+    .subIcon {
+      .font(16px, 16px);
+      margin-right: 0;
+      color: #ABAFBF;
+
+      :global { 
+        .ant-menu-submenu-selected .ant-menu-submenu-arrow::before,
+        .ant-menu-submenu-selected .ant-menu-submenu-arrow::after {
+            background-image: linear-gradient(to right, #303033, #303033);
+        }
+      }
+    }
+    // .subIcon:hover {
+    //     color: red !important;
+    // }
+
+    .selected {
+        color: #606166;
+    }
+
+    .iconMain {
+        color: #ABAFBF;
+    }
+    
+  }
+
+  .body {
+    background: white;
+
+    .content {
+      display: flex;
+    }
+  }
+
+}
+.linkDefault {
+      a {
+      color: @font-weak-color;
+  }
+}
+
+
+.link {
+
+    a {
+
+        color: @primary-btn-color !important; 
+        font-family:'PingFangSC-Regular,PingFang SC';
+        font-weight:400;
+        
+    }
+
+}
+
+
+// 折叠的导航
+:global {
+  .ant-menu-item > a {
+    font-family:'PingFangSC-Regular,PingFang SC';
+    font-weight:400;
+    // color: @primary-color;
+  }
+
+  .ant-menu-submenu-popup .ant-menu-sub {
+    padding: @spacer * .5 0;
+    a {
+      color: @font-title-color;
+      // color: @font-weak-color;
+    }
+  }
+
+  .ant-menu-submenu-popup .ant-menu-item {
+    margin-top: 0!important;;
+    margin-bottom: 0!important;;
+    height: 48px;
+    padding: 0 @spacer * 2;
+    .font(12px, 48px);
+    background: white!important;
+    transition: all .25s;
+  }
+
+  .ant-menu-submenu-popup .ant-menu-item-selected {
+    background: @list-bg-color !important;
+  }
+
+  .ant-menu-submenu-popup .ant-menu-item:hover {
+    background: @list-hover-color!important;
+  }
+
+  .ant-menu-item-selected > a {
+    color: @primary-color !important;
+}
+
+}
+
+.hoverIcon:hover .subIcon {
+    transition: all 0.5s;
+    color: @primary-hover-color!important;
+}
+
+.linkDefault:hover .iconMain {
+    transition: all 0.5s;
+    color: @primary-hover-color!important;
+}
+
+.titleMain {
+    font-size: 14px;
+}
+
+.iconMainClick {
+    color: @primary-color !important;
+}
+
+.childLabel {
+    font-size: 14px;
+    color: @font-title-color !important;
+    // color: @font-weak-color;
+}
+
+.childLabel:hover {
+    color: @primary-hover-color !important;
+}   

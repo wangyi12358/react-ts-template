@@ -1,0 +1,58 @@
+
+.transitionGroup {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+
+  >div {
+    background: white;
+    min-height: 100%;
+    width: 100%;
+  }
+
+  &.entering {
+    overflow: hidden;
+    >div {
+      position: absolute;
+    }
+  }
+}
+
+.routeTransitionEnter {
+  opacity: 0;
+}
+.routeTransitionEnterActive {
+  animation: fadeInRight ease-in-out forwards .3s;
+}
+.routeTransitionExit {
+  opacity: 1;
+}
+.routeTransitionExitActive {
+  animation: fadeOutLeft ease-in-out forwards .3s;
+}
+
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transform: none;
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+}

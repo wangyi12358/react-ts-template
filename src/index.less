@@ -1,0 +1,81 @@
+@import './common/less/index.less';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  font-family: PingFangSC-Regular,Heiti SC,Microsoft YaHei,Helvitica,Verdana,Arial,san-serif;
+  color: @font-text-color;
+  background: white;
+  .font(12px);
+  overflow-y: hidden;
+}
+
+p, h1, h2, h3, h4, h5, ul {
+  margin-bottom: 0;
+}
+
+a {
+  color: @primary-color;
+  &:hover {
+    color: @primary-hover-color;
+  }
+}
+
+input {
+  &::-webkit-input-placeholder {
+    color: @font-disabled-color;
+  }
+  &::-moz-placeholder {
+    color: @font-disabled-color;
+  }
+  &:-moz-placeholder {
+    color: @font-disabled-color;
+  }
+  &:-ms-input-placeholder {
+    color: @font-disabled-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: @font-title-color;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin-bottom: 0;
+}
+
+p {
+  color: @font-text-color;
+}
+
+h1 {
+  .font(42px);
+}
+
+h2 {
+  .font(30px);
+}
+
+h3 {
+  .font(20px);
+}
+
+h4 {
+  .font(16px);
+}
+
+h5 {
+  .font(14px);
+}
+
+h6 {
+  .font(12px);
+}

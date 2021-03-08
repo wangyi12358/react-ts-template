@@ -1,0 +1,48 @@
+@import '~common/less/index.less';
+
+.container {
+  flex: auto;
+  padding-top: @spacer * 2;
+
+  >h4 {
+    margin-bottom: @spacer * 2;
+    padding: 0 @spacer * 2;
+  }
+
+  .content {
+    box-sizing: border-box;
+    padding: 0 @spacer * 2;
+  }
+
+  &.hasFooter {
+
+    .footBox {
+      width: 100%;
+      height: 52px;
+
+      .footer {
+        width: calc(100% - 160px);
+        position: fixed;
+        bottom: 0;
+        border-top: 1px solid @list-bg-color;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // text-align: center;
+        background: white;
+        transform: scale(1);
+        transition: all 0.2s;
+
+        // &.collapsed {
+        //   width: calc(100% - 40px);
+        // }
+      
+        button {
+          margin-right: @spacer;
+        }
+      }
+    }
+  }
+
+}

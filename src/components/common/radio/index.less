@@ -1,0 +1,39 @@
+@import '~common/less/index.less';
+
+.radio {
+  color: @font-title-color;
+  display: flex;
+  align-items: center;
+  height: 20px;
+
+
+  :global {
+    .ant-radio-wrapper {
+      margin-right: @spacer * 4;
+    }
+    .ant-radio-inner {
+      width: 14px;
+      height: 14px;
+      background-color: white;
+
+      &::after {
+        width: 4px;
+        height: 4px;
+        border-radius: 4px;
+        background-color: white;
+        top: 4px;
+        left: 4px;
+      }
+
+    }
+    .ant-radio-checked .ant-radio-inner {
+      background-color: @primary-color;
+    }
+    .ant-radio + span {
+      .font(12px, 14px);
+      height: 14px;
+      padding: 0 @spacer * .5;
+      display: inline-block;
+    }
+  }
+}

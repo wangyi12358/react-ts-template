@@ -1,0 +1,141 @@
+@spacer : 10px;
+@radius : 2px;
+// loyout size
+@header-height   : 46px;
+@sider-width     : 130px;
+@sider-fold-width: 40px;
+
+// 品牌主题色
+@primary-color       : #286AB4;
+@primary-hover-color : #307ACC;
+@primary-btn-color   : #286AB4;
+
+// 文字颜色 
+@font-title-color    : #303033;
+@font-text-color     : #606166;
+@font-weak-color     : #909399;
+@font-disabled-color : #CCCCCC;
+@font-white-color     : #ffffff;
+
+// 分割线 和 描边
+@line-color   : #EEEEEE; // 分割线
+@border-color : #E4E4E4; // 描边
+
+// 底色
+@list-bg-color    : #F5F6FA; // 列表背景
+@list-dark-color  : #E7E8EE; // 列表深色背景
+@disabled-bg-color: #E4E4E4; // 阻止背景色
+@list-title-color : #FAFAFA; // 列表头底色
+@list-hover-color : #E3F3FF; // 列表鼠标进过色值
+
+// 功能色
+@waiting-color       : #1665D8;
+@waiting-hover-color : #1665D8;
+@success-color       : #6EA204;
+@success-hover-color : #6EA204;
+@warn-color          : #F2AF00;
+@warn-hover-color    : #FFC23F;
+@error-color         : #CE1126;
+@error-hover-color   : #CE1126;
+
+// 弹窗背景层
+@mask-color: rgba(0, 0, 0, .65);
+
+.transition(@time: .25s) {
+  transition: all @time;
+}
+
+//// 字体通用
+.font(@size, @lineHeight: @size) {
+  font-size  : @size;
+  line-height: @lineHeight;
+}
+
+// .font(@size, @lineHeight: 18px) when (@size =12px) {
+//   font-size  : @size;
+//   line-height: @lineHeight;
+// }
+
+// .font(@size, @lineHeight: 22px) when (@size =14px) {
+//   font-size  : @size;
+//   line-height: @lineHeight;
+// }
+
+// .font(@size, @lineHeight: 24px) when (@size =16px) {
+//   font-size  : @size;
+//   line-height: @lineHeight;
+// }
+
+// .font(@size, @lineHeight: 28px) when (@size =20px) {
+//   font-size  : @size;
+//   line-height: @lineHeight;
+// }
+
+// .font(@size, @lineHeight: 38px) when (@size =30px) {
+//   font-size  : @size;
+//   line-height: @lineHeight;
+// }
+
+// 文字超过 ...
+.text-ellipsis(@lien-clamp: 1) {
+  display           : -webkit-box;
+  text-overflow     : ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @lien-clamp;
+  overflow          : hidden;
+}
+
+// 卡片移入，向上移动
+.card-hover(@offset: 10px) {
+  transform : translateY(0);
+  transition: all .25s;
+
+  &:hover {
+    transform: translateY(-@offset);
+  }
+}
+
+// 滚动体样式
+.scrollBar() {
+  &::-webkit-scrollbar {
+    width : 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width           : 6px;
+    height          : 6px;
+    border-radius   : 3px;
+    background-color: rgb(222, 222, 228, 0);
+  }
+
+  &::-webkit-scrollbar-button {
+    height: 0;
+    width : 0;
+  }
+
+}
+
+// 修改input placeholder 字体颜色
+.placeholder() {
+  input {
+    &::placeholder {
+      color: @font-disabled-color;
+      .font(12px);
+    }
+  }
+}
+
+// keyframes
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

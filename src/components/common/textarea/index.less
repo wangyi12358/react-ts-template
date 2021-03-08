@@ -1,0 +1,58 @@
+@import '~common/less/index.less';
+.box {
+  width: 352px;
+  .textAreaBox {
+    width: 352px;
+    height: 130px;
+    position: relative;
+    border: 1px solid @border-color;
+    &:hover {
+      border-color: @primary-color;
+    }
+    .limit {
+      font-size: 12px;
+      font-weight: 400;
+      color: @font-weak-color;
+      position: absolute;
+      right: 10px;
+      bottom: 8px;
+      .textNum {
+        color: @primary-color;
+      }
+      .over {
+        color: @error-hover-color;
+      }
+      .text {
+        color: @font-title-color;
+      }
+    }
+    :global {
+      textarea {
+        outline: none;
+        resize: none;
+        border: none;
+        color: @font-title-color;
+        width: 352px;
+        height: 100%;
+      }
+    }
+  }
+  .overBox {
+    border-style: #fc5442;
+  }
+
+  .btn {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+
+    :global {
+      .ant-btn {
+        width: 75px;
+        height: 32px;
+        margin: 10px 0 0 10px;
+        font-size: 12px;
+      }
+    }
+  }
+}

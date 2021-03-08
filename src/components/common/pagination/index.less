@@ -1,0 +1,62 @@
+@import '~common/less/index.less';
+
+.pag {
+  display: flex;
+
+  .pagItem {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    .font(14px, 24px);
+    text-align: center;
+    color: @font-text-color;
+    transition: all .25s;
+
+    &.disabled {
+      color: @disabled-bg-color;
+      cursor: not-allowed;
+    }
+
+    &.firstPage {
+      margin-right: @spacer * .5;
+    }
+    &.lastPage {
+      margin-left: @spacer * .5;
+    }
+  }
+
+
+  :global {
+    .ant-pagination-item {
+      margin: 0 @spacer!important;
+      background-color: transparent;
+      font-family: Helvetica;
+      font-weight: 500;
+      // transition: all .25s;
+      border: none;
+
+      a {
+        display: inline-block;
+        padding: 0 3px;
+        color: @primary-color;
+        transition: all .25s;
+        .font(16px, 24px);
+        min-width: 24px;
+        &:hover {
+          color: @primary-hover-color;
+        }
+      }
+    }
+
+    .ant-pagination-item-active {
+      border: none;
+      background-color: @list-bg-color;
+    }
+
+    .ant-pagination-item-active a {
+      color: @font-title-color;
+    }
+  }
+
+}

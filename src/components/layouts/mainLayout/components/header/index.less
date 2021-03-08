@@ -1,0 +1,213 @@
+@import '~common/less/index.less';
+
+
+.header {
+  height: 47px;
+  // min-width: 1470px;
+  border-bottom: 1px solid @line-color;
+  background: white;
+  line-height: 47px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // position: sticky;
+  top: 0;
+
+  .headerBox {
+    height: 47px;
+    min-width: 1350px;
+    display: flex;
+  }
+
+  .modules {
+    background-color: #444E76;
+    color: @font-white-color;
+    display: flex;
+    align-items: center;
+    height: 47px;
+
+    .modIcon {
+      margin-left: @spacer*3;
+      margin-right: @spacer/2;
+      .font(20px)
+    }
+
+    span {
+      .font(14px);
+      font-weight: 500;
+      margin-right: @spacer;
+    }
+
+    .lastIcon {
+      margin-right: @spacer*2;
+      width: 6px;
+      height: 4px;
+    }
+  }
+
+  .projects {
+    margin-left: @spacer * 3;
+    display: flex;
+    list-style: none;
+    height: 100%;
+
+    li {
+      width: 140px;
+      padding: 0 @spacer;
+      height: 100%;
+      position: relative;
+
+      a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ABAFBF;
+        .font(14px);
+        // color: @font-weak-color;
+      }
+
+      svg {
+        .font(20px, 22px);
+        margin-right: @spacer * .5;
+      }
+    }
+
+    .selected {
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 12px;
+        left: 64px;
+        height: 4px;
+        background: @primary-color;
+      }
+
+      a {
+        color: @font-title-color;
+      }
+    }
+
+    .iconColor {
+      color: @primary-btn-color;
+    }
+  }
+
+  .noticeBox {
+    position: absolute;
+    right: 80px;
+    top: 0;
+    width: 46px;
+    height: 47px;
+    cursor: pointer;
+    padding-top: @spacer*0.5;
+
+    .notice {
+      opacity: 0;
+      position: absolute;
+      left: 10px;
+      border: 1px solid #9EA0A5;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      background-color: @list-bg-color;
+      // z-index: 1;
+    }
+
+    svg {
+      .font(20px, 20px);
+      color: #9EA0A5;
+    }
+  }
+
+  .menu {
+    // position: absolute;
+    // right: 20px;
+    // top: 0;
+    margin-right: 20px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .headPortrait {
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+    }
+
+    .iconArr {
+      // display: flex;
+      // flex-direction:column;
+      margin-left: @spacer;
+      // svg {
+      //   width: 6px;
+      //   height: 10px;
+      // }
+    }
+
+  }
+
+}
+
+.back {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: @primary-color;
+  color: @primary-color;
+  justify-content: center;
+
+  svg {
+    color: white;
+    background: @primary-btn-color;
+    .font(20px);
+  }
+
+}
+
+.logo {
+  margin-left: @spacer * 2;
+  margin-right: @spacer*2;
+  height: 100%;
+  padding: @spacer 0;
+
+  img {
+    height: 100%;
+    vertical-align: inherit;
+  }
+}
+
+.overlayContainer {
+  background: white;
+  border-left: 1px solid @line-color;
+  border-bottom: 1px solid @line-color;
+
+  .menuItem {
+    padding: 0 @spacer * 1.5;
+    background: white;
+    transition: all .25s;
+    width: 168px;
+    margin-top: 0;
+    margin-bottom: 0 !important;
+    font-size: 22px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+
+    span {
+      .font(14px, 48px);
+      margin-left: @spacer;
+    }
+
+    &:hover {
+      // background: ;
+    }
+  }
+}
