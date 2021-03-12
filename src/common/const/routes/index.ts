@@ -17,7 +17,7 @@ const routes: Route[] = [
     icon: 'icon-xiaolian',
     children: [
       {
-        path: '/demo/list',
+        path: '/',
         label: '列表',
         icon: 'icon-xiaolian',
         component: lazyComponent(() => import('pages/demo/list')),

@@ -6,7 +6,7 @@ import RouteUtils from 'common/utils/routeUtils';
 import ROUTES from 'common/const/routes';
 // import PROJECTS, { ProjectTypeEnum } from 'common/const/projects';
 import Icon from 'components/common/icon';
-import { useConnect } from 'model';
+import { useConnect } from 'model/index';
 import Header from './components/header';
 import css from './index.less';
 

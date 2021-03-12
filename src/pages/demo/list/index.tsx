@@ -15,20 +15,18 @@ interface Data {
   sex: number;
 }
 
-interface R {
-  keyword: string;
-}
-
 async function getData({ current, pageSize }: PaginatedParams[0], params) {
-  return Ajax.query({
-    url,
-    params: {
-      current,
-      pageSize,
-      ...params,
-      // ...other[3],
-    },
-  });
+  // return Ajax.query({
+  //   url,
+  //   params: {
+  //     current,
+  //     pageSize,
+  //     ...params,
+  //     // ...other[3],
+  //   },
+  // });
+  return { "list": [{ "id": 1, "name": "wang", "age": 20, "sex": 1, "createdAt": "2021-03-01T16:00:00.000Z", "updatedAt": null, "deletedAt": null }, { "id": 2, "name": "wang1", "age": 27, "sex": 1, "createdAt": "2021-03-01T16:00:00.000Z", "updatedAt": null, "deletedAt": null }, { "id": 3, "name": "waa1", "age": 66, "sex": 1, "createdAt": "2021-03-01T16:00:00.000Z", "updatedAt": null, "deletedAt": null }, { "id": 4, "name": "英雄联盟", "age": 11, "sex": 1, "createdAt": "2021-03-01T16:00:00.000Z", "updatedAt": null, "deletedAt": null }, { "id": 5, "name": "绝地求生", "age": 5, "sex": 1, "createdAt": "2021-03-01T16:00:00.000Z", "updatedAt": null, "deletedAt": null }], "total": 6 };
+
 }
 
 const List = React.memo(() => {

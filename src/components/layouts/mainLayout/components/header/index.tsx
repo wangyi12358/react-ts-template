@@ -94,10 +94,7 @@ const Header: React.FC<Props> = () => {
     <AntHeader className={css.header}>
       <div className={css.headerBox}>
         <div className={css.logo}>
-          <img
-            src="https://img.alicdn.com/imgextra/i1/4074958541/O1CN01yQosFB2CxpOE9k0uX_!!4074958541.png"
-            alt=""
-          />
+          LOGO
         </div>
         <ul className={css.projects}>
           {/* {project.list.map(item => {
